@@ -25,3 +25,16 @@ function toggleBalance(id, btnId) {
     btn.innerText = 'Show Balance';
   }
 }
+// Login logic
+function loginUser(event) {
+  event.preventDefault();
+  const userId = document.getElementById("userId").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const errorEl = document.getElementById("loginError");
+
+  if (userId === "Sukhdevmondal147258" && password === "JW-5858") {
+    window.location.href = "home.html";
+  } else {
+    errorEl.style.display = "block";
+  }
+}
