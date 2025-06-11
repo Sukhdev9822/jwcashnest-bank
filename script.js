@@ -38,3 +38,14 @@ function loginUser(event) {
     errorEl.style.display = "block";
   }
 }
+function toggleBalance(id, btnId) {
+  const balanceEl = document.getElementById(id);
+  const btn = document.getElementById(btnId);
+  if (balanceEl.innerText.includes('*****')) {
+    balanceEl.innerText = '₹ 8,95,74,000.52';
+    if (btn) btn.innerText = 'Hide Balance';
+  } else {
+    balanceEl.innerText = '₹ ********';
+    if (btn) btn.innerText = 'Show Balance';
+  }
+}
